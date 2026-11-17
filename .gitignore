@@ -1,0 +1,47 @@
+# Data — never commit datasets (download from GitHub Releases instead)
+data/*
+!data/README.md
+*.csv
+*.parquet
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Databricks
+.databricks/
+.bundle/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!example.tfvars
+.terraform.lock.hcl
+
+# Secrets — keep in Azure Key Vault, never in Git
+.env
+*.env
+secrets/
+*.pem
+*.key
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
