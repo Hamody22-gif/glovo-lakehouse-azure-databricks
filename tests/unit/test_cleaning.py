@@ -19,4 +19,3 @@ def test_city_key_matches_every_spelling(spark):
 def test_city_key_keeps_empty_city_empty(spark):
     df = spark.createDataFrame([(None,)], "city string")
     assert df.select(city_key(F.col("city")).alias("key")).first().key is None
-    
